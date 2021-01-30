@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+:root {
+  --tablet: 768px;
+  --smallMonitor: 992px;
+  --largeMonitor: 1200px;
+  --font-family: 'Open Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: var(--font-family) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body ::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ui.vertical.menu.sidebar-menu {
+  margin-top: 40px !important;
+  max-height: calc(100% - 40px) !important;
+  height: calc(100% - 40px) !important;
+}
+
+.ui.vertical.menu.sidebar-menu .item i.icon {
+  float: left;
+  margin: 0em 0.5em 0em 0em;
+}
+
+.main-content {
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .ui.vertical.menu.sidebar-menu {
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    width: 15rem !important;
+  }
+  .main-content {
+    margin-left: 15rem;
+  }
+  .sidebar-menu-toggler {
+    display: none !important;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*# sourceMappingURL=style.css.map */
