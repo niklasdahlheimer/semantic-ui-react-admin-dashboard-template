@@ -14,13 +14,13 @@ body ::-webkit-scrollbar {
   width: 6px;
 }
 
-.ui.vertical.menu.sidebar-menu {
+#sidebar {
   margin-top: 40px !important;
   max-height: calc(100% - 40px) !important;
   height: calc(100% - 40px) !important;
 }
 
-.ui.vertical.menu.sidebar-menu .item i.icon {
+#sidebar .item i.icon {
   float: left;
   margin: 0em 0.5em 0em 0em;
 }
@@ -30,7 +30,7 @@ body ::-webkit-scrollbar {
 }
 
 @media (min-width: 768px) {
-  .ui.vertical.menu.sidebar-menu {
+  #sidebar {
     visibility: visible;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);

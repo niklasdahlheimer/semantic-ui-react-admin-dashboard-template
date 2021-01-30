@@ -1,64 +1,42 @@
 import React from 'react'
-import {Button, Card, Grid, Header, Icon, Statistic, Table} from 'semantic-ui-react'
+import {Button, Card, Grid, Header, Icon, Statistic, Table,Sidebar, Menu,Form} from 'semantic-ui-react'
 
 export function DashboardSideBar() {
-    return <div className="ui sidebar inverted vertical menu sidebar-menu" id="sidebar">
-        <div className="item">
-            <div className="header">General</div>
-            <div className="menu">
-                <a className="item">
-                    <div>
-                        <Icon name={"tachometer alternate"}/>
-                        Dashboard
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div className="item">
-            <div className="header">
-                Administration
-            </div>
-            <div className="menu">
-                <a className="item">
-                    <div><i className="cogs icon"></i>Settings</div>
-                </a>
-                <a className="item">
-                    <div><i className="users icon"></i>Team</div>
-                </a>
-            </div>
-        </div>
+    return <Menu as={Sidebar} inverted vertical  id="sidebar">
+        <Menu.Item>
+            <Menu.Header content={"General"}/>
+            <Menu.Menu>
+                <Menu.Item link icon={"tachometer alternate"} content={"Dashboard"}/>
+            </Menu.Menu>
+        </Menu.Item>
 
-        <a href="#" className="item">
-            <div>
-                <Icon name={"chart line"}/>
-                Charts
-            </div>
-        </a>
 
-        <a className="item">
-            <div>
-                <Icon name={"lightbulb"}/>
-                Apps
-            </div>
-        </a>
-        <div className="item">
-            <div className="header">Other</div>
-            <div className="menu">
-                <a href="#" className="item">
-                    <div>
-                        <Icon name={"envelope"}/>
-                        Messages
-                    </div>
-                </a>
+        <Menu.Item>
+            <Menu.Header content={"Administration"}/>
+            <Menu.Menu>
+                <Menu.Item link icon={"cogs"} content={"Settings"} />
+                <Menu.Item link icon={"users"} content={"Team"}  />
+            </Menu.Menu>
+        </Menu.Item>
 
-                <a href="#" className="item">
-                    <div>
-                        <Icon name={"calendar alternate"}/>
-                        Calendar
-                    </div>
-                </a>
-            </div>
-        </div>
+        <Menu.Item link icon={"chart line"} content={"Charts"} />
+
+        <Menu.Item link icon={"lightbulb"} content={"Apps"} />
+
+        <Menu.Item>
+            <Menu.Header content={"Other"}/>
+            <Menu.Menu>
+                <Menu.Item link icon={"envelope"} content={"Messages"} />
+                <Menu.Item link icon={"calendar alternate"} content={"Calendar"} />
+            </Menu.Menu>
+        </Menu.Item>
+
+        <Menu.Item link icon={"envelope"} content={"Messages"}>
+            <Form size={"mini"}>
+                <Form.Input type={"text"} placeholder={"Search..."} icon={"search"}/>
+            </Form>
+
+        </Menu.Item>
 
         <div className="item">
             <form action="#">
@@ -81,5 +59,5 @@ export function DashboardSideBar() {
                 <div className="label">Disk Usage</div>
             </div>
         </div>
-    </div>;
+    </Menu>;
 }
