@@ -1,4 +1,4 @@
-import {Button, Card, Grid, Header, Icon, Statistic, Table} from 'semantic-ui-react'
+import {Button, Card, Header} from 'semantic-ui-react'
 import PropTypes from 'prop-types';
 import React from 'react'
 

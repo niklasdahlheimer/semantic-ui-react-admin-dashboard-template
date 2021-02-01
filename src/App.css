@@ -15,9 +15,9 @@ body ::-webkit-scrollbar {
 }
 
 #sidebar {
-  margin-top: 40px !important;
-  max-height: calc(100% - 40px) !important;
-  height: calc(100% - 40px) !important;
+  margin-top: 47px !important;
+  max-height: calc(100% - 47px) !important;
+  height: calc(100% - 47px) !important;
 }
 
 #sidebar .item i.icon {
@@ -26,12 +26,13 @@ body ::-webkit-scrollbar {
 }
 
 .main-content {
-  margin-top: 40px;
+  margin-top: 47px;
 }
 
 @media (min-width: 768px) {
   #sidebar {
     visibility: visible;
+    position:fixed;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     width: 15rem !important;

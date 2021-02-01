@@ -1,37 +1,34 @@
 import React from 'react'
-import {Button, Card, Grid, Header, Icon, Statistic, Table} from 'semantic-ui-react'
+import {Dropdown, Icon, Label, Menu} from 'semantic-ui-react'
 
-export function DashboardTopBar() {
-    return <nav className="ui top fixed inverted menu">
-        <div className="left menu">
-            <a href="#" className="sidebar-menu-toggler item" data-target="#sidebar">
-                <i className="sidebar icon"></i>
-            </a>
-            <a href="#" className="header item">
-                Semantic UI
-            </a>
-        </div>
+export function DashboardTopBar(props) {
+    return <Menu fixed='top' inverted>
+        <Menu.Menu position={"left"}>
+            <Menu.Item as={"a"} href={"#"} className={"sidebar-menu-toggler"} onClick={props.onMenuTogglerClicked} data-target="#sidebar" link>
+                <Icon name={"sidebar"}/>
+            </Menu.Item>
+            <Menu.Item header content={"Semantic UI"}/>
+        </Menu.Menu>
 
-        <div className="right menu">
-            <a href="#" className="item">
-                <i className="bell icon"></i>
-            </a>
-            <div className="ui dropdown item">
-                <i className="user cirlce icon"></i>
-                <div className="menu">
-                    <a href="#" className="item">
-                        <i className="info circle icon"></i> Profile</a
-                    >
-                    <a href="#" className="item">
-                        <i className="wrench icon"></i>
-                        Settings</a
-                    >
-                    <a href="#" className="item">
-                        <i className="sign-out icon"></i>
-                        Logout
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>;
+        <Menu.Menu position={"right"}>
+            <Menu.Item link>
+                <Icon name={"bell"} size="large"/>
+                <Label color='red' floating>
+                    22
+                </Label>
+
+            </Menu.Item>
+
+            <Dropdown item icon={<Icon name={"user circle"} size="large"/>}>
+                <Dropdown.Menu direction={"left"}>
+                    <Dropdown.Item icon={"info circle"} content={"Profile"}/>
+                    <Dropdown.Item icon={"wrench"} content={"Settings"}/>
+                    <Dropdown.Item icon={"sign-out"} content={"Logout"}/>
+                </Dropdown.Menu>
+            </Dropdown>
+
+        </Menu.Menu>
+
+
+    </Menu>;
 }

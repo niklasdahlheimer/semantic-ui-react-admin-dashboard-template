@@ -1,5 +1,4 @@
-import {Button, Card, Grid, Header, Icon, Statistic, Table} from 'semantic-ui-react'
-import PropTypes from 'prop-types';
+import {Icon, Table} from 'semantic-ui-react'
 import React from 'react'
 
 export function DashboardTable() {
